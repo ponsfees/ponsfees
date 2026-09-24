@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fees</title>
+    <meta name="description" content="Launch a token on Pons and share its trading fees with X, Twitch and GitHub accounts, written into a contract at launch that nobody can change." />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon-64.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0e0f0c" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Fees" />
+    <meta property="og:description" content="Token launches on Pons that share their fees with X, Twitch and GitHub accounts, permanently." />
+    <!-- ⚠ ABSOLUTE. A relative og:image renders a blank card on X. Set to the real domain before deploy. -->
+    <meta property="og:image" content="%VITE_SITE_URL%/og.png" />
+    <meta property="og:url" content="%VITE_SITE_URL%" />
+    <!-- ⛔ twitter:card has no og equivalent; without it a 1200x630 image is cropped to a square. -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@usefeesapp" />
+    <meta name="twitter:title" content="Fees" />
+    <meta name="twitter:description" content="Token launches on Pons that share their fees with X, Twitch and GitHub accounts." />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

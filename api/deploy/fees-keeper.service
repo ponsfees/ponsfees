@@ -1,0 +1,14 @@
+[Unit]
+Description=FEES keeper: sweep and harvest every launch's fee splitter
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/root/fees-api
+ExecStart=/usr/bin/node /root/fees-api/keeper.mjs
+# ⭐ Arming is a FILE, never a session: KEEPER_KEY lives here (0600). The key only pays gas; every
+# call it makes is permissionless on the splitter, so a leak costs its ETH balance and nothing else.
+EnvironmentFile=/root/fees-ops/keeper.env
+Environment=STATUS=/var/lib/fees/status.json
+# ⚠ A pass over a large registry on a rate-limited RPC can be slow; a hung one must not stack up.
+TimeoutStartSec=12min

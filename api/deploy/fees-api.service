@@ -1,0 +1,18 @@
+[Unit]
+Description=FEES api (logos, sign-in, claim vouchers)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/fees-api
+ExecStart=/usr/bin/node /root/fees-api/server.mjs
+# ⛔⛔ SECRETS LIVE IN THE ENV FILE (0600), NEVER IN Environment= LINES: unit files are world readable.
+EnvironmentFile=/root/fees-ops/api.env
+Environment=PORT=8810
+Environment=LOGO_DIR=/root/fees-logos
+Environment=STATUS=/var/lib/fees/status.json
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

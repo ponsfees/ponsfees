@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  /* The site's own tokens, copied: this renders standalone in headless Chrome. */
+  :root { --paper:#0e0f0c; --edge:#272a23; --accent:#cfe9b0; --ink:#f1efe8; --text-dim:#a9ae9f; }
+  * { box-sizing: border-box; margin: 0; }
+  /* ⛔ Exactly 1200x630: X and every scraper crop anything else. */
+  html, body { width: 1200px; height: 630px; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Inter Tight", system-ui, sans-serif;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden;
+  }
+  .mark { width: 190px; height: 190px; margin-bottom: 18px; filter: drop-shadow(0 16px 20px rgba(0,0,0,.55)); }
+  h1 { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 112px; letter-spacing: -0.04em; line-height: 1; }
+  .rule { width: 132px; height: 1px; background: var(--edge); margin: 30px 0 26px; }
+  .sub { font-size: 29px; font-weight: 500; color: var(--text-dim); letter-spacing: -0.005em; }
+  .sub b { color: var(--ink); font-weight: 600; }
+</style></head>
+<body>
+  <img class="mark" src="mark.png" alt="">
+  <h1>Fees</h1>
+  <div class="rule"></div>
+  <p class="sub">Share a token's fees with <b>X</b>, <b>Twitch</b> and <b>GitHub</b> accounts</p>
+</body></html>

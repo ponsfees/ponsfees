@@ -1,0 +1,14 @@
+{
+  "name": "fees-api",
+  "private": true,
+  "type": "module",
+  "description": "FEES: logos, the launch index, the identity/claim service for fee shares assigned to X, GitHub and Twitch accounts, and the keeper that cranks every splitter.",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "keeper": "node --env-file-if-exists=.env keeper.mjs",
+    "test": "NODE_ENV=test node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "viem": "^2.21.0"
+  }
+}
